@@ -1,0 +1,148 @@
+{
+  "project": "EmbodiedLLM",
+  "framework": "Harness",
+  "framework_version": "1.2.3.5",
+  "study": {
+    "selected_cases": 72,
+    "completed_cases": 53,
+    "completion_percent": 73.61,
+    "historically_successful": {
+      "total": 42,
+      "success_retained": 39,
+      "became_unsuccessful": 3
+    },
+    "historically_unsuccessful": {
+      "total": 30,
+      "became_successful": 14,
+      "remained_unsuccessful": 16
+    },
+    "task_categories": [
+      {
+        "label": "Atomic-Seen",
+        "selected_cases": 28,
+        "completed_cases": 24
+      },
+      {
+        "label": "Composite-Seen",
+        "selected_cases": 24,
+        "completed_cases": 16
+      },
+      {
+        "label": "Composite-Unseen",
+        "selected_cases": 20,
+        "completed_cases": 13
+      }
+    ],
+    "control_steps": {
+      "total_executed": 77907,
+      "vla_generated": 75150,
+      "direct_motor_tools": 2757,
+      "vla_percent": 96.46,
+      "direct_motor_percent": 3.54
+    },
+    "execution_routes": [
+      {
+        "label": "Original instruction with Harness monitoring",
+        "case_count": 46
+      },
+      {
+        "label": "Adjusted instructions; all actions from the VLA",
+        "case_count": 14
+      },
+      {
+        "label": "Mixed control: VLA and direct motor tools",
+        "case_count": 12
+      }
+    ],
+    "scope": "Selected historical development scenes, including reused results and authorized recovery attempts. Not an independent held-out benchmark or a full-leaderboard score. Outcome changes and execution routes do not isolate individual rule contributions. Control-step share does not measure autonomous time or overall efficiency."
+  },
+  "recorded_cases": [
+    {
+      "id": "U08",
+      "task": "ArrangeBreadBasket",
+      "version": "1.2.3.5",
+      "outcome": "success",
+      "control_steps": 1127,
+      "vla_generated_percent": 100,
+      "direct_motor_steps": 0,
+      "reference": {
+        "version": "1.2.3.4",
+        "terminal_step": 4350,
+        "outcome": "without success"
+      },
+      "events": [
+        {
+          "step": 320,
+          "kind": "Matched trajectory prefix",
+          "description": "The compared attempts share their first 320 actions. Sampled full physics states at steps 0, 16, and 320 agree."
+        },
+        {
+          "step": 321,
+          "kind": "New VLA instruction",
+          "instruction": "Place the bread in the basket on the counter."
+        },
+        {
+          "step": 513,
+          "kind": "New VLA instruction",
+          "instruction": "Then move the basket to the dining counter."
+        },
+        {
+          "step": 1127,
+          "kind": "Environment outcome",
+          "description": "Task completed; all physical actions are VLA-generated."
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "task": "PreSoakPan",
+      "version": "1.2.3.5",
+      "outcome": "success",
+      "control_steps": 2277,
+      "vla_generated_percent": 100,
+      "direct_motor_steps": 0,
+      "reference": {
+        "version": "1.2.3.4",
+        "terminal_step": 2400,
+        "outcome": "without success",
+        "terminal_subgoals_complete": 2,
+        "terminal_subgoals_total": 3,
+        "description": "Pan and sponge in sink; water still off."
+      },
+      "events": [
+        {
+          "step": 1600,
+          "kind": "Matched trajectory prefix",
+          "description": "The compared attempts share their first 1600 actions. The three images actually delivered to the LLM at step 1600 are identical."
+        },
+        {
+          "step": 1601,
+          "kind": "New VLA instruction",
+          "instruction": "Then turn on the water."
+        },
+        {
+          "step": 2277,
+          "kind": "Environment outcome",
+          "description": "Task completed; all physical actions are VLA-generated."
+        }
+      ]
+    },
+    {
+      "id": "SC23",
+      "task": "WashLettuce",
+      "public_failure_review_steps": [
+        575,
+        703
+      ],
+      "direct_control_interval": {
+        "first_step": 704,
+        "last_step": 941,
+        "step_count": 238
+      },
+      "vla_resumes_at_step": 942,
+      "success_at_step": 1242,
+      "boundary_feedback": "At step 941, public feedback still described direct grasp attempts as unsuccessful. This shows escalation and handback; it does not establish that the direct grasp itself succeeded or caused the final outcome."
+    }
+  ],
+  "comparison_scope": "U08 and C10 use the contemporaneous six-case development comparison from October 22, 2026. The reference attempts belong to a different batch from the earlier aggregate 72-case evaluation and are not a pure-VLA baseline. The traces support a combined progress-review, context, and instruction-adjustment mechanism; they do not isolate one phrase or threshold as the cause."
+}

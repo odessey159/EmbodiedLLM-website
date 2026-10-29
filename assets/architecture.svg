@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">EmbodiedLLM execution architecture</title>
+  <desc id="desc">A task enters an LLM planner. The Harness scopes tool calls, monitors progress and verifies execution. A separate frozen VLA policy produces actions for a separate simulator process. Observations and execution feedback return to the planner and Harness. A bounded direct-control route can be authorized without passing through the VLA. The original goal and official task outcome remain authoritative.</desc>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#f5f8fc"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#328cf6"/><stop offset="1" stop-color="#0058bf"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#fbfcfe"/></linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dy="10" stdDeviation="14" flood-color="#4f6e90" flood-opacity=".065"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m2 1 5 4-5 4" stroke="#3a85d7" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <marker id="mutedArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m2 1 5 4-5 4" stroke="#9bb4ce" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1600v900H0z"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
+    <text x="80" y="83" fill="#64758b" font-size="22" font-weight="600" letter-spacing="2.2">EMBODIEDLLM / EXECUTION LOOP</text>
+    <text x="80" y="169" fill="#182638" font-size="56" font-weight="600" letter-spacing="-2">Reasoning, grounded in feedback.</text>
+    <text x="82" y="216" fill="#718094" font-size="25">A planner, a governed tool layer, and independent policy and simulation processes.</text>
+    <rect x="343" y="280" width="580" height="309" rx="32" fill="#edf4fc" stroke="#dfebf8"/>
+    <g font-size="19" font-weight="600" letter-spacing="1.7" fill="#8292a6"><text x="632" y="321" text-anchor="middle">AGENT PROCESS</text><text x="1064" y="321" text-anchor="middle">POLICY PROCESS</text><text x="1372" y="321" text-anchor="middle">ENVIRONMENT PROCESS</text></g>
+    <g filter="url(#shadow)">
+      <rect x="80" y="354" width="206" height="208" rx="24" fill="url(#card)" stroke="#e0e7ef"/>
+      <rect x="367" y="354" width="226" height="208" rx="24" fill="#fff" stroke="#d6e3f2"/>
+      <rect x="647" y="354" width="252" height="208" rx="24" fill="#fff" stroke="#bfd8f4"/>
+      <rect x="956" y="354" width="216" height="208" rx="24" fill="url(#card)" stroke="#e0e7ef"/>
+      <rect x="1262" y="354" width="258" height="208" rx="24" fill="url(#card)" stroke="#e0e7ef"/>
+    </g>
+    <path d="M286 458h67m240 0h40m266 0h43m230 0h76" stroke="#4389d9" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <g stroke="#7089a4" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="163" y="385" width="39" height="45" rx="7" fill="#f3f6fa" stroke="#cad7e4"/><path d="M173 399h19m-19 9h19m-19 9h11"/>
+      <path d="M463 387h33a10 10 0 0 1 10 10v18a10 10 0 0 1-10 10h-19l-13 9v-9h-1a10 10 0 0 1-10-10v-18a10 10 0 0 1 10-10Z" fill="#f3f7fc" stroke="#b1c8e2"/><path d="M465 402h27m-27 10h19"/>
+      <path d="m773 383 23 9v17c0 14-9 24-23 30-15-6-24-16-24-30v-17l24-9Z" fill="#eaf4ff" stroke="#5f9fe7"/><path d="m761 408 8 8 16-17" stroke="#1774d9" stroke-width="3"/>
+      <rect x="1042" y="388" width="43" height="39" rx="9" fill="#f3f6fa" stroke="#bdcddd"/><path d="M1052 398h23v19h-23zM1049 381v7m13-7v7m13-7v7m-26 39v7m13-7v7m13-7v7m-40-37h7m-7 13h7m43-13h7m-7 13h7"/>
+      <path d="m1390 383 26 15v30l-26 15-26-15v-30l26-15Z" fill="#f3f7fc" stroke="#b2c7dd"/><path d="m1364 398 26 15 26-15m-26 15v30"/>
+    </g>
+    <g font-size="29" font-weight="600" text-anchor="middle" fill="#22364e"><text x="183" y="479">Task</text><text x="480" y="479">LLM planner</text><text x="773" y="479">Harness</text><text x="1064" y="479">Frozen VLA</text><text x="1391" y="479">Simulator</text></g>
+    <g font-size="21" text-anchor="middle" fill="#78899d"><text x="183" y="517">Original goal</text><text x="480" y="517">Plan + tool calls</text><text x="773" y="517">Monitor + verify</text><text x="1064" y="517">Action chunks</text><text x="1391" y="517">Execute + observe</text></g>
+    <path d="M899 535h25v87c0 13 7 20 20 20h423c13 0 20-7 20-20v-44" stroke="#9bb4ce" stroke-width="2" stroke-dasharray="6 7" stroke-linecap="round" marker-end="url(#mutedArrow)"/>
+    <rect x="857" y="623" width="443" height="38" rx="19" fill="#f5f8fc"/>
+    <text x="1078" y="649" text-anchor="middle" fill="#8a9db2" font-size="21">Bounded direct control · when authorized</text>
+    <path d="M1442 563v148c0 18-10 28-28 28H508c-18 0-28-10-28-28V581" stroke="#3a85d7" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="M773 739V578" stroke="#3a85d7" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <rect x="835" y="718" width="481" height="43" rx="21.5" fill="#f5f8fc"/>
+    <text x="1075" y="746" fill="#407dbd" font-size="23" text-anchor="middle">Observations + execution feedback</text>
+    <text x="800" y="847" fill="#8c9bad" font-size="21" text-anchor="middle">Scoped tools and budgets. Preserved task goals. Official outcome checks.</text>
+  </g>
+</svg>

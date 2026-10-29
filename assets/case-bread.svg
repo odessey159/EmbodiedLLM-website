@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">U08: instruction changes during a recorded bread-basket task</title>
+  <desc id="desc">Recorded events from Harness 1.2.3.5: the compared runs share the first 320 actions; a new instruction at step 321 asks for bread in the basket, another at step 513 asks to move the basket, and the task succeeds at step 1127. All physical actions in this attempt came from the VLA. Event spacing is not proportional to elapsed time.</desc>
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#f4f7fb"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1675ef"/><stop offset="1" stop-color="#0054be"/></linearGradient>
+    <linearGradient id="breadFill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9dbbd"/><stop offset="1" stop-color="#ccac76"/></linearGradient>
+    <linearGradient id="basketFill" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2f4f7"/><stop offset="1" stop-color="#dce3ec"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dy="10" stdDeviation="14" flood-color="#58728e" flood-opacity=".075"/></filter>
+    <g id="bread"><path d="M-52 6c-6-23 13-40 35-35 13-19 40-14 47 4 23-1 35 20 22 38-9 14-25 19-51 19-26 0-47-8-53-26Z" fill="url(#breadFill)" stroke="#b69c74" stroke-width="2.5"/><path d="m-25-8 11 10m10-17 12 11m9-10 10 11" stroke="#b69865" stroke-width="4" stroke-linecap="round"/></g>
+    <g id="basket"><path d="m-72 0 13 73c2 11 10 17 21 17h77c11 0 19-6 21-17L73 0" fill="url(#basketFill)" stroke="#9baabd" stroke-width="3"/><path d="M-44 1v-18c0-29 18-50 44-50s44 21 44 50V1" stroke="#a8b5c6" stroke-width="8"/><path d="M-72 0H73" stroke="#8598b1" stroke-width="8" stroke-linecap="round"/><path d="m-44 23 5 43m20-43 2 43m20-43v43m21-43-3 43m21-43-5 43" stroke="#bac6d6" stroke-width="3" stroke-linecap="round"/></g>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m2 1 5 4-5 4" stroke="#0871e7" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1600v900H0z"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif">
+    <text x="80" y="79" fill="#64758b" font-size="22" font-weight="600" letter-spacing="2.2">U08 / ARRANGE BREAD BASKET</text>
+    <text x="80" y="169" fill="#182638" font-size="56" font-weight="600" letter-spacing="-2">One task. Two grounded instructions.</text>
+    <text x="82" y="216" fill="#718094" font-size="25">Harness 1.2.3.5 · All physical actions from VLA</text>
+    <g filter="url(#shadow)">
+      <rect x="80" y="276" width="330" height="326" rx="27" fill="#fff" stroke="#e8edf3"/>
+      <rect x="450" y="276" width="330" height="326" rx="27" fill="#fff" stroke="#e8edf3"/>
+      <rect x="820" y="276" width="330" height="326" rx="27" fill="#fff" stroke="#e8edf3"/>
+      <rect x="1190" y="276" width="330" height="326" rx="27" fill="#fff" stroke="#d7e8fb"/>
+    </g>
+    <text x="111" y="322" fill="#8190a2" font-size="19" font-weight="600" letter-spacing="1.6">SHARED PREFIX</text>
+    <text x="481" y="322" fill="#1673df" font-size="19" font-weight="600" letter-spacing="1.6">NEW INSTRUCTION</text>
+    <text x="851" y="322" fill="#1673df" font-size="19" font-weight="600" letter-spacing="1.6">NEW INSTRUCTION</text>
+    <text x="1221" y="322" fill="#1673df" font-size="19" font-weight="600" letter-spacing="1.6">OFFICIAL OUTCOME</text>
+    <ellipse cx="245" cy="533" rx="105" ry="13" fill="#eff2f6"/>
+    <use href="#basket" transform="translate(267 432) scale(.75)"/>
+    <use href="#bread" transform="translate(171 502) rotate(-12) scale(.71)"/>
+    <path d="M160 369h167M160 383h167" stroke="#c9d3e0" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="615" cy="536" rx="105" ry="13" fill="#eef4fb"/>
+    <use href="#basket" transform="translate(615 451) scale(.84)"/>
+    <use href="#bread" transform="translate(615 382) rotate(-8) scale(.77)"/>
+    <path d="M615 410v26" stroke="#0871e7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <path d="m882 505 186-38 48 29-186 40-48-31Z" fill="#edf2f7" stroke="#cbd6e2" stroke-width="2"/>
+    <path d="M930 537v30m186-71v31" stroke="#cbd6e2" stroke-width="3" stroke-linecap="round"/>
+    <use href="#basket" transform="translate(951 428) scale(.7)"/>
+    <use href="#bread" transform="translate(951 413) rotate(-8) scale(.62)"/>
+    <path d="M995 388h62c17 0 27 10 27 26v21" stroke="#0871e7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+    <circle cx="1355" cy="433" r="75" fill="#edf5ff"/>
+    <circle cx="1355" cy="433" r="58" fill="url(#blue)"/>
+    <path d="m1329 433 18 18 35-37" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1355" y="550" fill="#0067d5" font-size="30" font-weight="600" text-anchor="middle">Success</text>
+    <path d="M245 669h1110" stroke="#d9e2ed" stroke-width="3"/>
+    <path d="M615 669h740" stroke="#2781eb" stroke-width="3"/>
+    <circle cx="245" cy="669" r="10" fill="#b4c1d1" stroke="#f7f9fc" stroke-width="5"/>
+    <circle cx="615" cy="669" r="10" fill="#1475e4" stroke="#f7f9fc" stroke-width="5"/>
+    <circle cx="985" cy="669" r="10" fill="#1475e4" stroke="#f7f9fc" stroke-width="5"/>
+    <circle cx="1355" cy="669" r="10" fill="#1475e4" stroke="#f7f9fc" stroke-width="5"/>
+    <g font-size="29" font-weight="600" fill="#25364a" text-anchor="middle">
+      <text x="245" y="727">Step 320</text><text x="615" y="727">Step 321</text><text x="985" y="727">Step 513</text><text x="1355" y="727">Step 1127</text>
+    </g>
+    <g font-size="23" fill="#718094" text-anchor="middle">
+      <text x="245" y="770">Same first 320 actions</text><text x="615" y="770">Place bread in basket</text><text x="985" y="770">Move basket to counter</text><text x="1355" y="770">Task complete</text>
+    </g>
+    <text x="800" y="848" fill="#9aa5b3" font-size="20" text-anchor="middle">Event sequence • control steps</text>
+  </g>
+</svg>
