@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="EmbodiedLLM explores the connection between language, robotic action, and the physical world.">
+  <title>EmbodiedLLM — Autonomy. With oversight.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Main navigation">
+      <a class="wordmark" href="#top" aria-label="EmbodiedLLM home">EmbodiedLLM<span>.</span></a>
+      <div class="nav-right">
+        <button class="menu-toggle" type="button" aria-controls="navigation-links" aria-expanded="false">Menu <i aria-hidden="true"></i></button>
+        <div class="nav-links" id="navigation-links"><a href="#overview">Overview</a><a href="#experience">Experience</a><a href="#perspective">Perspective</a></div>
+        <a class="button small blue" href="#experience">Explore</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="hero-product">EmbodiedLLM</p><h1 id="hero-title">Autonomy.<br>With oversight.</h1><p class="hero-description">Language. Action. Understanding.<br>A connection to the physical world.</p></div>
+      <div class="hero-visual"><img src="assets/hero-sculpture.svg" width="1600" height="900" alt="A sculptural silver robotic arm." fetchpriority="high"></div>
+      <a class="discovery-pill" href="#overview"><span>Discover the project.</span><span class="pill-arrow" aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="introduction" id="overview" aria-labelledby="overview-title">
+      <div class="intro-copy" data-reveal><p class="eyebrow">Language-guided robotics.</p><h2 id="overview-title">A world of intent.<br><span>A world of action.</span></h2><p class="intro-description">EmbodiedLLM explores how language and robotic action come together. Connecting what we want to do with what a robot can observe, understand, and act on in the physical world.</p></div>
+    </section>
+
+    <section class="features section-gray" aria-labelledby="features-title">
+      <div class="section-heading wide" data-reveal><h2 id="features-title">A closer look.<br>From every angle.</h2><a class="text-link" href="#experience">Explore the connection <span aria-hidden="true">↗</span></a></div>
+      <div class="gallery" id="feature-gallery" aria-label="Project perspectives" tabindex="0">
+        <article class="feature-card intent-card">
+          <div class="card-copy"><p class="card-eyebrow">Task intent</p><h3>Start with<br>what matters.</h3><p>A meaningful action begins with a clear goal.</p></div>
+          <div class="intent-art" aria-hidden="true"><div class="intent-glow"></div><div class="intent-orb"><svg viewBox="0 0 64 64" fill="none"><path d="M17 16h30a7 7 0 0 1 7 7v18a7 7 0 0 1-7 7H32L17 57v-9a7 7 0 0 1-7-7V23a7 7 0 0 1 7-7Z"/><path d="M21 28h22M21 37h14"/></svg></div><div class="intent-line"></div><div class="intent-goal">A clear goal.</div></div>
+          <button class="plus-button" type="button" data-detail="intent" aria-label="Read about task intent">+</button>
+        </article>
+        <article class="feature-card scene-card">
+          <div class="card-copy"><p class="card-eyebrow">Scene context</p><h3>See the scene.<br>Find the meaning.</h3><p>Objects, positions, and relationships create context.</p></div>
+          <div class="scene-art" aria-hidden="true"><div class="scene-grid"></div><div class="scene-object object-one"></div><div class="scene-object object-two"></div><div class="scene-object object-three"></div><div class="scene-focus"><i></i><i></i><i></i><i></i></div><span class="scene-caption">Context connects the details.</span></div>
+          <button class="plus-button" type="button" data-detail="context" aria-label="Read about scene context">+</button>
+        </article>
+        <article class="feature-card action-card">
+          <div class="card-copy"><p class="card-eyebrow">Action + feedback</p><h3>Make a move.<br>Keep the connection.</h3><p>Each action changes the scene. Each observation adds context.</p></div>
+          <div class="action-art" aria-hidden="true"><div class="action-ring"></div><div class="action-core">↺</div><span class="action-label label-observe">Observe</span><span class="action-label label-act">Act</span><span class="action-label label-connect">Connect</span></div>
+          <button class="plus-button" type="button" data-detail="action" aria-label="Read about action and feedback">+</button>
+        </article>
+      </div>
+      <div class="gallery-controls wide"><p class="gallery-count" aria-live="polite"><strong id="gallery-current">1</strong><span> / 3</span></p><div class="gallery-arrows"><button class="round-button" type="button" id="gallery-prev" aria-label="Previous perspective" disabled>‹</button><button class="round-button" type="button" id="gallery-next" aria-label="Next perspective">›</button></div></div>
+    </section>
+
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="centered-copy" data-reveal><p class="eyebrow">Explore the connection</p><h2 class="display-heading" id="experience-title">One task.<br>A connected view.</h2><p class="section-description">Intent, observation, and action.<br>Ideas that make sense together.</p></div>
+      <div class="workflow wide" data-reveal>
+        <div class="workflow-visual" aria-hidden="true"><p class="workflow-label">The physical context</p><div class="workflow-map"><div class="map-path"></div><div class="workflow-node selected" data-node="observe"><svg viewBox="0 0 48 48" fill="none"><path d="M4 24s7-13 20-13 20 13 20 13-7 13-20 13S4 24 4 24Z"/><circle cx="24" cy="24" r="6"/></svg><span>Observe</span></div><div class="workflow-node" data-node="understand"><svg viewBox="0 0 48 48" fill="none"><path d="M12 8h24a5 5 0 0 1 5 5v18a5 5 0 0 1-5 5H22l-11 7v-7a5 5 0 0 1-4-5V13a5 5 0 0 1 5-5Z"/><path d="M15 18h18m-18 9h12"/></svg><span>Understand</span></div><div class="workflow-node" data-node="act"><svg viewBox="0 0 48 48" fill="none"><path d="M8 34h14V20l9-12 8 6-9 12v8h10M8 40h32M23 22l7 4M12 34v-8h8"/></svg><span>Act</span></div><div class="workflow-node" data-node="feedback"><svg viewBox="0 0 48 48" fill="none"><path d="M38 18A16 16 0 1 0 39 29M38 8v11H27"/></svg><span>Feedback</span></div><span class="map-center">↺</span></div><p class="workflow-bottom">A connection between intent and action.</p></div>
+        <div class="workflow-content"><div class="workflow-tabs" aria-label="Explore a perspective"><button class="selected" type="button" data-phase="observe" aria-pressed="true">Observe</button><button type="button" data-phase="understand" aria-pressed="false">Understand</button><button type="button" data-phase="act" aria-pressed="false">Act</button><button type="button" data-phase="feedback" aria-pressed="false">Feedback</button></div><div class="phase-detail" aria-live="polite"><p class="phase-eyebrow" id="phase-eyebrow">Observe</p><h3 id="phase-title">A scene.<br>More context.</h3><p id="phase-description">Physical tasks begin with a view of the surroundings. Objects, positions, and relationships provide context for an action.</p></div></div>
+      </div>
+    </section>
+
+    <section class="perspective section-dark" id="perspective" aria-labelledby="perspective-title">
+      <div class="centered-copy" data-reveal><p class="eyebrow">A human perspective</p><h2 class="display-heading" id="perspective-title">Physical intelligence.<br>Shared understanding.</h2><p class="section-description">Technology becomes meaningful when<br>human intent stays part of the picture.</p></div>
+      <div class="perspective-grid wide" data-reveal><div><span class="perspective-icon" aria-hidden="true">↗</span><h3>Clear goals.</h3><p>Keep the intended task at the center of the conversation.</p></div><div><span class="perspective-icon" aria-hidden="true">⌖</span><h3>Grounded context.</h3><p>Connect language to the objects and relationships in a scene.</p></div><div><span class="perspective-icon" aria-hidden="true">↺</span><h3>Visible progress.</h3><p>Bring actions and observations into a connected view.</p></div></div>
+      <a class="dark-link text-link" href="#overview">Discover EmbodiedLLM <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner wide"><p>EmbodiedLLM explores the connection between language, robotic action, and the physical world.</p><div class="footer-bottom"><a class="wordmark" href="#top">EmbodiedLLM<span>.</span></a><span>© 2026 EmbodiedLLM.</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></div></footer>
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close details">×</button><div class="dialog-inner"><p class="dialog-eyebrow" id="dialog-eyebrow"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p></div></dialog>
+</body>
+</html>
